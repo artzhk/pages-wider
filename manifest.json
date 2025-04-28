@@ -8,6 +8,6 @@
     "default_title": "Full Width Pages"
   },
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   }
 }
