@@ -1,0 +1,13 @@
+{
+  "name": "Full Width Pages",
+  "description": "Page wider",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Full Width Pages"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
