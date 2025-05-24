@@ -2,7 +2,7 @@ const wider = () => {
   const elements = {};
   [].forEach.call(document.querySelectorAll("div, main"), function (el) {
     const currentWidth = window.getComputedStyle(el).maxWidth;
-    if (currentWidth != "100%") {
+    if (currentWidth && currentWidth != "100%") {
       elements[el.id] = { initialWidth: currentWidth };
       el.style.maxWidth = "100%";
     }
