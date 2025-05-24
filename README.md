@@ -5,8 +5,6 @@ Find it is annoying to scroll back and forth during reading docs.
 # How does it work
 The script simply finds all the elements on the DOM that have max-width prop and set it to 100%.
 
-Don't hesitate to open a PR if have you have yet another idea how to improve pages extension.
-
 # Installation
 The repository contains two branches.
 1. Clone the entire stuff 
@@ -22,3 +20,6 @@ git checkout chrome
 ```
 
 3. Load extensions to the chrome or firefox.
+
+# Suggestions or improvements?
+Don't hesitate to open a PR if have you have yet another idea how to improve pages extension.
