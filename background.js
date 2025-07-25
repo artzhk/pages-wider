@@ -1,5 +1,5 @@
 const wider = () => {
-        [].forEach.call(document.querySelectorAll("div, main, table"), function (el) {
+        [].forEach.call(document.querySelectorAll("div, main, table, body"), function (el) {
                 const maxWidth = window.getComputedStyle(el).maxWidth;
                 const width = window.getComputedStyle(el).width;
 		const _float = window.getComputedStyle(el).float;
