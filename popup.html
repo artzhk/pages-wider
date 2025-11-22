@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Width Pages</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+        margin: 16px;
+        min-width: 260px;
+        color: #0f172a;
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0 0 12px 0;
+      }
+
+      .card {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 12px;
+        background: #f8fafc;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin: 8px 0;
+      }
+
+      .label {
+        font-weight: 600;
+      }
+
+      button {
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid #cbd5e1;
+        background: white;
+        color: #0f172a;
+        cursor: pointer;
+      }
+
+      button.primary {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+      }
+
+      button:disabled {
+        background: #e2e8f0;
+        color: #475569;
+        cursor: not-allowed;
+      }
+
+      .muted {
+        color: #475569;
+        font-size: 12px;
+      }
+
+      .list {
+        margin: 8px 0 0 0;
+        padding-left: 18px;
+        color: #0f172a;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 4px 8px;
+        background: #e0f2fe;
+        border-radius: 12px;
+        margin: 4px 4px 0 0;
+        font-size: 12px;
+      }
+
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .shortcut-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 8px 0;
+      }
+
+      .shortcut-display {
+        padding: 6px 10px;
+        background: #e2e8f0;
+        border-radius: 6px;
+        min-width: 120px;
+        text-align: center;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Full Width Pages</h1>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">Current site</div>
+          <div id="site-label" class="muted"></div>
+        </div>
+        <button id="site-toggle" class="primary">Loading...</button>
+      </div>
+      <div id="site-hint" class="muted"></div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="label">Always on</div>
+        <button id="always-toggle" class="primary">Loading...</button>
+      </div>
+      <div class="muted">Apply full width on every page.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Activation shortcut</div>
+      <div class="shortcut-row">
+        <div id="shortcut-display" class="shortcut-display">Not set</div>
+        <button id="shortcut-record">Record key</button>
+      </div>
+      <div class="muted">Press a combination (e.g. Alt+Shift+W) to toggle the current site from any page.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Saved sites</div>
+      <div id="saved-sites" class="muted">Loading...</div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
