@@ -2,20 +2,6 @@ const wider = () => {
         [].forEach.call(document.querySelectorAll("div, main, table, body"), function (el) {
                 const maxWidth = window.getComputedStyle(el).maxWidth;
                 const width = window.getComputedStyle(el).width;
-// <<<<<<< Updated upstream
-// 		const _float = window.getComputedStyle(el).float;
-// 
-// 		const numericWidth = parseFloat(width);
-// 		const inReadFriendlyRange = numericWidth < 1000 && numericWidth > 600;
-// 
-// 		if (_float && _float !== "none") {
-// 			el.style.float = "none";
-// 		}
-//                 if (numericwidth != nan && inreadfriendlyrange) {
-//                         el.style.width = "auto";
-//                 }
-//                 if (maxwidth && maxwidth != "none") {
-// =======
                 const floatValue = window.getComputedStyle(el).float;
 
                 const numericWidth = parseFloat(width);
@@ -33,21 +19,6 @@ const wider = () => {
         });
 };
 
-// <<<<<<< Updated upstream
-// chrome.runtime.onInstalled.addListener(() => {
-//         chrome.action.setBadgeText({
-//                 text: "Wide",
-//         });
-// });
-// 
-// chrome.action.onClicked.addListener(async (tab) => {
-//         await chrome.scripting.executeScript({
-//                 target: { tabId: tab.id },
-//                 func: wider,
-//         });
-// });
-// 
-// =======
 const DEFAULT_SETTINGS = {
         alwaysOn: false,
         sites: {},
