@@ -1,0 +1,9 @@
+{
+  "name": "pages-wider",
+  "version": "1.0.0",
+  "description": "Development utilities for the Pages Wider extension",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}

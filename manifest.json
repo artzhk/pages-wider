@@ -1,12 +1,34 @@
 {
   "name": "Full Width Pages",
   "description": "Page wider",
-  "version": "1.1",
+  "version": "2.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "action": {
-    "default_title": "Full Width Pages"
+    "default_title": "Full Width Pages",
+    "default_popup": "popup.html"
   },
+  "commands": {
+    "toggle-site-wide": {
+      "suggested_key": {
+        "default": "Alt+Shift+W"
+      },
+      "description": "Toggle full-width mode for the current site"
+    },
+    "toggle-always-on": {
+      "suggested_key": {
+        "default": "Alt+Shift+A"
+      },
+      "description": "Toggle always-on full-width mode"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   }
